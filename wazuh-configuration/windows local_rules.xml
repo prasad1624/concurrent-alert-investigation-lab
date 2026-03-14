@@ -1,0 +1,30 @@
+
+   
+
+<group name="windows,sysmon,">
+  <rule id="600001" level="6">
+    <if_sid>61603</if_sid>
+    <field name="win.eventdata.image">powershell.exe</field>
+    <description>Sysmon: PowerShell executed</description>
+  </rule>
+
+  <rule id="600002" level="7">
+    <if_sid>61613</if_sid>
+    <field name="win.eventdata.targetFilename">\.syslogs</field>
+    <description>Sysmon: Hidden file created in .syslogs directory</description>
+  </rule>
+
+  <rule id="600003" level="8">
+    <if_sid>61603</if_sid>
+    <field name="win.eventdata.image">schtasks.exe</field>
+    <description>Sysmon: Scheduled task activity</description>
+  </rule>
+
+  <rule id="600999" level="12" frequency="2" timeframe="300">
+    <if_matched_sid>600001</if_matched_sid>
+    <if_matched_sid>600002</if_matched_sid>
+    <if_matched_sid>600003</if_matched_sid>
+    <description>CRITICAL: Windows Persistence Correlation Detected</description>
+    <group>windows,persistence_attack</group>
+  </rule>
+</group>
