@@ -1,0 +1,59 @@
+{
+  "_index": "wazuh-alerts-4.x-2026.03.13",
+  "_id": "x_mr5ZwB3jLWbdFbqDRD",
+  "_score": 1,
+  "_source": {
+    "predecoder": {
+      "hostname": "sp",
+      "program_name": "sshd",
+      "timestamp": "Mar 13 05:29:20"
+    },
+    "agent": {
+      "ip": "192.168.29.90",
+      "name": "agent3-ubuntu",
+      "id": "003"
+    },
+    "manager": {
+      "name": "ubuntu"
+    },
+    "data": {
+      "srcuser": "ki",
+      "srcip": "192.168.29.50"
+    },
+    "rule": {
+      "firedtimes": 6,
+      "mail": false,
+      "level": 7,
+      "description": "SSH authentication failure detected",
+      "groups": [
+        "ssh",
+        "finance",
+        "critical_alerts",
+        "ssh",
+        "authentication",
+        "failed"
+      ],
+      "id": "100100"
+    },
+    "decoder": {
+      "parent": "sshd",
+      "name": "sshd"
+    },
+    "full_log": "Mar 13 05:29:20 sp sshd[8062]: Failed password for invalid user ki from 192.168.29.50 port 34496 ssh2",
+    "input": {
+      "type": "log"
+    },
+    "@timestamp": "2026-03-13T05:29:16.476Z",
+    "location": "journald",
+    "id": "1773379756.306610",
+    "timestamp": "2026-03-13T10:59:16.476+0530"
+  },
+  "fields": {
+    "timestamp": [
+      "2026-03-13T05:29:16.476Z"
+    ],
+    "@timestamp": [
+      "2026-03-13T05:29:16.476Z"
+    ]
+  }
+}

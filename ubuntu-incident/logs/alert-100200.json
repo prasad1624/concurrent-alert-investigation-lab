@@ -1,0 +1,82 @@
+{
+  "_index": "wazuh-alerts-4.x-2026.03.13",
+  "_id": "Efmv5ZwB3jLWbdFbyzVE",
+  "_score": 1,
+  "_source": {
+    "agent": {
+      "ip": "192.168.29.90",
+      "name": "agent3-ubuntu",
+      "id": "003"
+    },
+    "manager": {
+      "name": "ubuntu"
+    },
+    "data": {
+      "audit": {
+        "syscall": "196",
+        "auid": "1000",
+        "gid": "0",
+        "euid": "0",
+        "fsgid": "0",
+        "session": "5",
+        "pid": "8516",
+        "suid": "0",
+        "type": "SYSCALL",
+        "command": "cp",
+        "ppid": "8503",
+        "fsuid": "0",
+        "exit": "0",
+        "uid": "0",
+        "cwd": "/home/sp/Documents/Clients/TechGroup/Finance/FY_2026/January",
+        "egid": "0",
+        "exe": "/usr/bin/cp",
+        "file": {
+          "inode": "1705615",
+          "mode": "0100600",
+          "name": "null"
+        },
+        "success": "yes",
+        "tty": "pts1",
+        "sgid": "0",
+        "id": "6412",
+        "arch": "c000003e",
+        "key": "finance_access"
+      }
+    },
+    "rule": {
+      "firedtimes": 45,
+      "mail": true,
+      "level": 12,
+      "description": "Access to Tier-0 finance directory detected",
+      "groups": [
+        "ssh",
+        "finance",
+        "critical_alerts",
+        "file_access",
+        "finance",
+        "sensitive_data"
+      ],
+      "id": "100200"
+    },
+    "decoder": {
+      "parent": "auditd",
+      "name": "auditd"
+    },
+    "full_log": "type=SYSCALL msg=audit(1773380031.499:6412): arch=c000003e syscall=196 success=yes exit=0 a0=4 a1=7ffdcf679910 a2=0 a3=0 items=1 ppid=8503 pid=8516 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts1 ses=5 comm=\"cp\" exe=\"/usr/bin/cp\" subj=unconfined key=\"finance_access\"\u001dARCH=x86_64 SYSCALL=flistxattr AUID=\"sp\" UID=\"root\" GID=\"root\" EUID=\"root\" SUID=\"root\" FSUID=\"root\" EGID=\"root\" SGID=\"root\" FSGID=\"root\" type=CWD msg=audit(1773380031.499:6412): cwd=\"/home/sp/Documents/Clients/TechGroup/Finance/FY_2026/January\" type=PATH msg=audit(1773380031.499:6412): item=0 name=(null) inode=1705615 dev=08:02 mode=0100600 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0\u001dOUID=\"root\" OGID=\"root\" type=PROCTITLE msg=audit(1773380031.499:6412): proctitle=6370002D700054475F41554449545F4A414E32365F496E7465726E616C5F5265766965772E747874002F726F6F742F66696E616E63655F6261636B7570732F6A616E5F323032362F",
+    "input": {
+      "type": "log"
+    },
+    "@timestamp": "2026-03-13T05:33:46.628Z",
+    "location": "/var/log/audit/audit.log",
+    "id": "1773380026.415618",
+    "timestamp": "2026-03-13T11:03:46.628+0530"
+  },
+  "fields": {
+    "timestamp": [
+      "2026-03-13T05:33:46.628Z"
+    ],
+    "@timestamp": [
+      "2026-03-13T05:33:46.628Z"
+    ]
+  }
+}

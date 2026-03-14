@@ -1,0 +1,60 @@
+{
+  "_index": "wazuh-alerts-4.x-2026.03.13",
+  "_id": "yvmr5ZwB3jLWbdFb4jTl",
+  "_score": 1,
+  "_source": {
+    "predecoder": {
+      "hostname": "sp",
+      "program_name": "sshd",
+      "timestamp": "Mar 13 05:29:30"
+    },
+    "agent": {
+      "ip": "192.168.29.90",
+      "name": "agent3-ubuntu",
+      "id": "003"
+    },
+    "manager": {
+      "name": "ubuntu"
+    },
+    "data": {
+      "srcip": "192.168.29.50",
+      "dstuser": "sp",
+      "srcport": "57494"
+    },
+    "rule": {
+      "firedtimes": 2,
+      "mail": false,
+      "level": 5,
+      "description": "SSH authentication success",
+      "groups": [
+        "ssh",
+        "finance",
+        "critical_alerts",
+        "ssh",
+        "authentication",
+        "success"
+      ],
+      "id": "100101"
+    },
+    "decoder": {
+      "parent": "sshd",
+      "name": "sshd"
+    },
+    "full_log": "Mar 13 05:29:30 sp sshd[8064]: Accepted password for sp from 192.168.29.50 port 57494 ssh2",
+    "input": {
+      "type": "log"
+    },
+    "@timestamp": "2026-03-13T05:29:27.711Z",
+    "location": "journald",
+    "id": "1773379767.307736",
+    "timestamp": "2026-03-13T10:59:27.711+0530"
+  },
+  "fields": {
+    "timestamp": [
+      "2026-03-13T05:29:27.711Z"
+    ],
+    "@timestamp": [
+      "2026-03-13T05:29:27.711Z"
+    ]
+  }
+}

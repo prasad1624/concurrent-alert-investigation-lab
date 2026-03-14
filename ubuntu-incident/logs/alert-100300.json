@@ -1,0 +1,62 @@
+{
+  "_index": "wazuh-alerts-4.x-2026.03.13",
+  "_id": "Afmv5ZwB3jLWbdFbLjXv",
+  "_score": 1,
+  "_source": {
+    "predecoder": {
+      "hostname": "sp",
+      "program_name": "sudo",
+      "timestamp": "Mar 13 05:33:11"
+    },
+    "agent": {
+      "ip": "192.168.29.90",
+      "name": "agent3-ubuntu",
+      "id": "003"
+    },
+    "manager": {
+      "name": "ubuntu"
+    },
+    "data": {
+      "srcuser": "sp",
+      "dstuser": "root",
+      "tty": "pts/0",
+      "pwd": "/home/sp/Documents/Clients/TechGroup/Finance/FY_2026/January",
+      "command": "/bin/bash"
+    },
+    "rule": {
+      "firedtimes": 2,
+      "mail": false,
+      "level": 10,
+      "description": "Successful privilege escalation via sudo detected",
+      "groups": [
+        "ssh",
+        "finance",
+        "critical_alerts",
+        "sudo",
+        "privilege_escalation"
+      ],
+      "id": "100300"
+    },
+    "decoder": {
+      "parent": "sudo",
+      "name": "sudo",
+      "ftscomment": "First time user executed the sudo command"
+    },
+    "full_log": "Mar 13 05:33:11 sp sudo[8501]:       sp : TTY=pts/0 ; PWD=/home/sp/Documents/Clients/TechGroup/Finance/FY_2026/January ; USER=root ; COMMAND=/bin/bash",
+    "input": {
+      "type": "log"
+    },
+    "@timestamp": "2026-03-13T05:33:06.617Z",
+    "location": "journald",
+    "id": "1773379986.384060",
+    "timestamp": "2026-03-13T11:03:06.617+0530"
+  },
+  "fields": {
+    "timestamp": [
+      "2026-03-13T05:33:06.617Z"
+    ],
+    "@timestamp": [
+      "2026-03-13T05:33:06.617Z"
+    ]
+  }
+}
