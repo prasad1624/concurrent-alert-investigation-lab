@@ -1,0 +1,92 @@
+{
+  "_index": "wazuh-alerts-4.x-2026.03.13",
+  "_id": "gPnA5ZwB3jLWbdFbnTaX",
+  "_score": 1,
+  "_source": {
+    "agent": {
+      "ip": "192.168.29.80",
+      "name": "agent2-windows-10",
+      "id": "002"
+    },
+    "manager": {
+      "name": "ubuntu"
+    },
+    "data": {
+      "win": {
+        "eventdata": {
+          "originalFileName": "schtasks.exe",
+          "image": "C:\\\\Windows\\\\System32\\\\schtasks.exe",
+          "product": "Microsoft® Windows® Operating System",
+          "parentProcessGuid": "{b3ec6325-a5fa-69b3-7c01-000000001a00}",
+          "description": "Task Scheduler Configuration Tool",
+          "logonGuid": "{b3ec6325-a5b5-69b3-9dee-280000000000}",
+          "parentCommandLine": "powershell",
+          "processGuid": "{b3ec6325-a617-69b3-a001-000000001a00}",
+          "logonId": "0x28ee9d",
+          "parentProcessId": "1316",
+          "processId": "8084",
+          "currentDirectory": "C:\\\\Users\\\\sp\\\\",
+          "utcTime": "2026-03-13 05:52:23.268",
+          "hashes": "SHA1=FCE60EBC7EBCC8B09D5821338391D800E7B37591,MD5=D4DA03B7BB20B7E4F1B762A365D4DD4F,SHA256=9A80453518078BADF0679B0CF30F50A83163E5264A2665C6052CC27F168C50F2,IMPHASH=ECCE05491F2E8F279F4790BCB1318C05",
+          "parentImage": "C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+          "ruleName": "technique_id=T1053.005,technique_name=Scheduled Task/Job",
+          "company": "Microsoft Corporation",
+          "commandLine": "\\\"C:\\\\Windows\\\\system32\\\\schtasks.exe\\\" /Delete /TN NotepadMonitor /F",
+          "integrityLevel": "High",
+          "fileVersion": "10.0.19041.3636 (WinBuild.160101.0800)",
+          "user": "DESKTOP-IA4VHK8\\\\sp",
+          "terminalSessionId": "0",
+          "parentUser": "DESKTOP-IA4VHK8\\\\sp"
+        },
+        "system": {
+          "eventID": "1",
+          "keywords": "0x8000000000000000",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "level": "4",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "opcode": "0",
+          "message": "\"Process Create:\r\nRuleName: technique_id=T1053.005,technique_name=Scheduled Task/Job\r\nUtcTime: 2026-03-13 05:52:23.268\r\nProcessGuid: {b3ec6325-a617-69b3-a001-000000001a00}\r\nProcessId: 8084\r\nImage: C:\\Windows\\System32\\schtasks.exe\r\nFileVersion: 10.0.19041.3636 (WinBuild.160101.0800)\r\nDescription: Task Scheduler Configuration Tool\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: schtasks.exe\r\nCommandLine: \"C:\\Windows\\system32\\schtasks.exe\" /Delete /TN NotepadMonitor /F\r\nCurrentDirectory: C:\\Users\\sp\\\r\nUser: DESKTOP-IA4VHK8\\sp\r\nLogonGuid: {b3ec6325-a5b5-69b3-9dee-280000000000}\r\nLogonId: 0x28EE9D\r\nTerminalSessionId: 0\r\nIntegrityLevel: High\r\nHashes: SHA1=FCE60EBC7EBCC8B09D5821338391D800E7B37591,MD5=D4DA03B7BB20B7E4F1B762A365D4DD4F,SHA256=9A80453518078BADF0679B0CF30F50A83163E5264A2665C6052CC27F168C50F2,IMPHASH=ECCE05491F2E8F279F4790BCB1318C05\r\nParentProcessGuid: {b3ec6325-a5fa-69b3-7c01-000000001a00}\r\nParentProcessId: 1316\r\nParentImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nParentCommandLine: powershell\r\nParentUser: DESKTOP-IA4VHK8\\sp\"",
+          "version": "5",
+          "systemTime": "2026-03-13T05:52:23.2892369Z",
+          "eventRecordID": "19380",
+          "threadID": "5268",
+          "computer": "DESKTOP-IA4VHK8",
+          "task": "1",
+          "processID": "3432",
+          "severityValue": "INFORMATION",
+          "providerName": "Microsoft-Windows-Sysmon"
+        }
+      }
+    },
+    "rule": {
+      "firedtimes": 1,
+      "mail": false,
+      "level": 8,
+      "description": "Sysmon: Scheduled task activity",
+      "groups": [
+        "windows",
+        "sysmon"
+      ],
+      "id": "600003"
+    },
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "full_log": "{\"win\":{\"system\":{\"providerName\":\"Microsoft-Windows-Sysmon\",\"providerGuid\":\"{5770385f-c22a-43e0-bf4c-06f5698ffbd9}\",\"eventID\":\"1\",\"version\":\"5\",\"level\":\"4\",\"task\":\"1\",\"opcode\":\"0\",\"keywords\":\"0x8000000000000000\",\"systemTime\":\"2026-03-13T05:52:23.2892369Z\",\"eventRecordID\":\"19380\",\"processID\":\"3432\",\"threadID\":\"5268\",\"channel\":\"Microsoft-Windows-Sysmon/Operational\",\"computer\":\"DESKTOP-IA4VHK8\",\"severityValue\":\"INFORMATION\",\"message\":\"\\\"Process Create:\\r\\nRuleName: technique_id=T1053.005,technique_name=Scheduled Task/Job\\r\\nUtcTime: 2026-03-13 05:52:23.268\\r\\nProcessGuid: {b3ec6325-a617-69b3-a001-000000001a00}\\r\\nProcessId: 8084\\r\\nImage: C:\\\\Windows\\\\System32\\\\schtasks.exe\\r\\nFileVersion: 10.0.19041.3636 (WinBuild.160101.0800)\\r\\nDescription: Task Scheduler Configuration Tool\\r\\nProduct: Microsoft® Windows® Operating System\\r\\nCompany: Microsoft Corporation\\r\\nOriginalFileName: schtasks.exe\\r\\nCommandLine: \\\"C:\\\\Windows\\\\system32\\\\schtasks.exe\\\" /Delete /TN NotepadMonitor /F\\r\\nCurrentDirectory: C:\\\\Users\\\\sp\\\\\\r\\nUser: DESKTOP-IA4VHK8\\\\sp\\r\\nLogonGuid: {b3ec6325-a5b5-69b3-9dee-280000000000}\\r\\nLogonId: 0x28EE9D\\r\\nTerminalSessionId: 0\\r\\nIntegrityLevel: High\\r\\nHashes: SHA1=FCE60EBC7EBCC8B09D5821338391D800E7B37591,MD5=D4DA03B7BB20B7E4F1B762A365D4DD4F,SHA256=9A80453518078BADF0679B0CF30F50A83163E5264A2665C6052CC27F168C50F2,IMPHASH=ECCE05491F2E8F279F4790BCB1318C05\\r\\nParentProcessGuid: {b3ec6325-a5fa-69b3-7c01-000000001a00}\\r\\nParentProcessId: 1316\\r\\nParentImage: C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe\\r\\nParentCommandLine: powershell\\r\\nParentUser: DESKTOP-IA4VHK8\\\\sp\\\"\"},\"eventdata\":{\"ruleName\":\"technique_id=T1053.005,technique_name=Scheduled Task/Job\",\"utcTime\":\"2026-03-13 05:52:23.268\",\"processGuid\":\"{b3ec6325-a617-69b3-a001-000000001a00}\",\"processId\":\"8084\",\"image\":\"C:\\\\\\\\Windows\\\\\\\\System32\\\\\\\\schtasks.exe\",\"fileVersion\":\"10.0.19041.3636 (WinBuild.160101.0800)\",\"description\":\"Task Scheduler Configuration Tool\",\"product\":\"Microsoft® Windows® Operating System\",\"company\":\"Microsoft Corporation\",\"originalFileName\":\"schtasks.exe\",\"commandLine\":\"\\\\\\\"C:\\\\\\\\Windows\\\\\\\\system32\\\\\\\\schtasks.exe\\\\\\\" /Delete /TN NotepadMonitor /F\",\"currentDirectory\":\"C:\\\\\\\\Users\\\\\\\\sp\\\\\\\\\",\"user\":\"DESKTOP-IA4VHK8\\\\\\\\sp\",\"logonGuid\":\"{b3ec6325-a5b5-69b3-9dee-280000000000}\",\"logonId\":\"0x28ee9d\",\"terminalSessionId\":\"0\",\"integrityLevel\":\"High\",\"hashes\":\"SHA1=FCE60EBC7EBCC8B09D5821338391D800E7B37591,MD5=D4DA03B7BB20B7E4F1B762A365D4DD4F,SHA256=9A80453518078BADF0679B0CF30F50A83163E5264A2665C6052CC27F168C50F2,IMPHASH=ECCE05491F2E8F279F4790BCB1318C05\",\"parentProcessGuid\":\"{b3ec6325-a5fa-69b3-7c01-000000001a00}\",\"parentProcessId\":\"1316\",\"parentImage\":\"C:\\\\\\\\Windows\\\\\\\\System32\\\\\\\\WindowsPowerShell\\\\\\\\v1.0\\\\\\\\powershell.exe\",\"parentCommandLine\":\"powershell\",\"parentUser\":\"DESKTOP-IA4VHK8\\\\\\\\sp\"}}}",
+    "input": {
+      "type": "log"
+    },
+    "@timestamp": "2026-03-13T05:52:09.626Z",
+    "location": "EventChannel",
+    "id": "1773381129.1113346",
+    "timestamp": "2026-03-13T11:22:09.626+0530"
+  },
+  "fields": {
+    "timestamp": [
+      "2026-03-13T05:52:09.626Z"
+    ],
+    "@timestamp": [
+      "2026-03-13T05:52:09.626Z"
+    ]
+  }
+}

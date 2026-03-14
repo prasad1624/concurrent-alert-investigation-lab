@@ -1,0 +1,77 @@
+{
+  "_index": "wazuh-alerts-4.x-2026.03.13",
+  "_id": "iPnA5ZwB3jLWbdFb9zac",
+  "_score": 1,
+  "_source": {
+    "agent": {
+      "ip": "192.168.29.80",
+      "name": "agent2-windows-10",
+      "id": "002"
+    },
+    "manager": {
+      "name": "ubuntu"
+    },
+    "data": {
+      "win": {
+        "eventdata": {
+          "image": "C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+          "processGuid": "{b3ec6325-a5fa-69b3-7c01-000000001a00}",
+          "processId": "1316",
+          "utcTime": "2026-03-13 05:52:41.366",
+          "targetFilename": "C:\\\\Users\\\\sp\\\\AppData\\\\Local\\\\.syslogs\\\\health_monitor.ps1",
+          "ruleName": "technique_id=T1059.001,technique_name=PowerShell",
+          "creationUtcTime": "2026-03-13 05:52:41.366",
+          "user": "DESKTOP-IA4VHK8\\\\sp"
+        },
+        "system": {
+          "eventID": "11",
+          "keywords": "0x8000000000000000",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "level": "4",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "opcode": "0",
+          "message": "\"File created:\r\nRuleName: technique_id=T1059.001,technique_name=PowerShell\r\nUtcTime: 2026-03-13 05:52:41.366\r\nProcessGuid: {b3ec6325-a5fa-69b3-7c01-000000001a00}\r\nProcessId: 1316\r\nImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\Users\\sp\\AppData\\Local\\.syslogs\\health_monitor.ps1\r\nCreationUtcTime: 2026-03-13 05:52:41.366\r\nUser: DESKTOP-IA4VHK8\\sp\"",
+          "version": "2",
+          "systemTime": "2026-03-13T05:52:41.3707226Z",
+          "eventRecordID": "19403",
+          "threadID": "5268",
+          "computer": "DESKTOP-IA4VHK8",
+          "task": "11",
+          "processID": "3432",
+          "severityValue": "INFORMATION",
+          "providerName": "Microsoft-Windows-Sysmon"
+        }
+      }
+    },
+    "rule": {
+      "firedtimes": 1,
+      "mail": false,
+      "level": 7,
+      "description": "Sysmon: Hidden file created in .syslogs directory",
+      "groups": [
+        "windows",
+        "sysmon"
+      ],
+      "id": "600002"
+    },
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "full_log": "{\"win\":{\"system\":{\"providerName\":\"Microsoft-Windows-Sysmon\",\"providerGuid\":\"{5770385f-c22a-43e0-bf4c-06f5698ffbd9}\",\"eventID\":\"11\",\"version\":\"2\",\"level\":\"4\",\"task\":\"11\",\"opcode\":\"0\",\"keywords\":\"0x8000000000000000\",\"systemTime\":\"2026-03-13T05:52:41.3707226Z\",\"eventRecordID\":\"19403\",\"processID\":\"3432\",\"threadID\":\"5268\",\"channel\":\"Microsoft-Windows-Sysmon/Operational\",\"computer\":\"DESKTOP-IA4VHK8\",\"severityValue\":\"INFORMATION\",\"message\":\"\\\"File created:\\r\\nRuleName: technique_id=T1059.001,technique_name=PowerShell\\r\\nUtcTime: 2026-03-13 05:52:41.366\\r\\nProcessGuid: {b3ec6325-a5fa-69b3-7c01-000000001a00}\\r\\nProcessId: 1316\\r\\nImage: C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe\\r\\nTargetFilename: C:\\\\Users\\\\sp\\\\AppData\\\\Local\\\\.syslogs\\\\health_monitor.ps1\\r\\nCreationUtcTime: 2026-03-13 05:52:41.366\\r\\nUser: DESKTOP-IA4VHK8\\\\sp\\\"\"},\"eventdata\":{\"ruleName\":\"technique_id=T1059.001,technique_name=PowerShell\",\"utcTime\":\"2026-03-13 05:52:41.366\",\"processGuid\":\"{b3ec6325-a5fa-69b3-7c01-000000001a00}\",\"processId\":\"1316\",\"image\":\"C:\\\\\\\\Windows\\\\\\\\System32\\\\\\\\WindowsPowerShell\\\\\\\\v1.0\\\\\\\\powershell.exe\",\"targetFilename\":\"C:\\\\\\\\Users\\\\\\\\sp\\\\\\\\AppData\\\\\\\\Local\\\\\\\\.syslogs\\\\\\\\health_monitor.ps1\",\"creationUtcTime\":\"2026-03-13 05:52:41.366\",\"user\":\"DESKTOP-IA4VHK8\\\\\\\\sp\"}}}",
+    "input": {
+      "type": "log"
+    },
+    "@timestamp": "2026-03-13T05:52:32.055Z",
+    "location": "EventChannel",
+    "id": "1773381152.1130314",
+    "timestamp": "2026-03-13T11:22:32.055+0530"
+  },
+  "fields": {
+    "timestamp": [
+      "2026-03-13T05:52:32.055Z"
+    ],
+    "@timestamp": [
+      "2026-03-13T05:52:32.055Z"
+    ]
+  }
+}
