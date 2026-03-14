@@ -75,12 +75,6 @@ SHA256 hashes were identical between the original and backup files. This provide
 
 ![Hash Comparison](screenshots/ubuntu/hash-comparison.png)
 
-### Established Practice: 2+ Year Backup Structure
-
-Monthly backups since 2024 with consistent naming confirmed this was routine administrative activity and not anomalous behavior.
-
-![Backup Structure 2025](screenshots/ubuntu/backup-structure-2025.png)
-
 ### Initial Alert
 
 ![Wazuh Alert 100999](screenshots/ubuntu/wazuh-alert-100999.png)
